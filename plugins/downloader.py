@@ -171,7 +171,7 @@ async def youtube_dl_call_back(bot, update):
                     start_time
                 )
             )
-            forwarded_msg = await video.forward(config.LOG_CHANNEL)
+            forwarded_msg = await video.forward(Config.LOG_CHANNEL)
             await forwarded_msg.reply_text(f"#NEW_UPLOAD:\n\nUser: [{update.from_user.first_name}](tg://user?id={update.from_user.id}) Uploaded the file!", disable_web_page_preview=True)
 
             end_two = datetime.now()
